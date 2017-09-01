@@ -45,12 +45,12 @@ public class TimeTellerTest {
 
     @Test
     public void localTimeInWordsCurrent(){
-        assertThat(timeTeller.getFormattedTime(TimeZone.LOCAL, TimeFormatting.APPROXIMATE_WORDING,false), matchesPattern("^(\\s|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty|almost|a|quarter|half|of|past|after|before|at|night|in|the|morning|afternoon|evening|night)+$"));
+        assertThat(timeTeller.getFormattedTime(TimeZone.LOCAL, TimeFormatting.APPROXIMATE_WORDING,false), matchesPattern("^(\\s|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty|about|almost|a|little|after|quarter|half|of|past|before|at|night|in|the|morning|afternoon|evening|night)+$"));
     }
 
     @Test
     public void zuluTimeInWordsCurrent(){
-        assertThat(timeTeller.getFormattedTime(TimeZone.UTC, TimeFormatting.APPROXIMATE_WORDING,false), matchesPattern("^(\\s|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty|almost|a|quarter|half|of|past|after|before|at|night|in|the|morning|afternoon|evening|night)+Zulu$"));
+        assertThat(timeTeller.getFormattedTime(TimeZone.UTC, TimeFormatting.APPROXIMATE_WORDING,false), matchesPattern("^(\\s|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty|about|almost|a|little|after|quarter|half|of|past|before|at|night|in|the|morning|afternoon|evening|night)+Zulu$"));
     }
 
     @Test
